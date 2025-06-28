@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crispy Kitchen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      padding: 0%;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+    }
+
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:0% 0%;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .navbar ul li a.active {
+      color: #f44336;
+    }
+
+    .navbar .btn {
+      background-color: #f44336;
+      color: white;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+
+    
+    .hero {
+      display: flex;
+      padding: 60px;
+      background: #000;
+      color: white;
+      align-items: center;
+    }
+
+    .hero .text {
+      flex: 1;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero .rating {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    .hero .rating span {
+      color: gold;
+    }
+
+    .hero img {
+      width: 400px;
+      border-radius: 10px;
+    }
+
+    .price {
+      display: inline-block;
+      background: white;
+      color: black;
+      padding: 5px 10px;
+      margin-top: 10px;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+
+    .arrows {
+      margin-top: 20px;
+    }
+
+    .arrows button {
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      margin-right: 5px;
+      border-radius: 4px;
+    }
+
+    .arrows .left {
+      background-color: orange;
+    }
+
+    .arrows .right {
+      background-color: red;
+      color: white;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .menu-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .menu-card {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .badge {
+      position: absolute;
+      background-color: orange;
+      color: white;
+      padding: 5px 12px;
+      font-size: 12px;
+      top: 15px;
+      right: 15px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .menu-info {
+      padding: 15px;
+      position: relative;
+    }
+
+    .menu-info h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .price {
+      display: inline-block;
+      background-color: #f0f0f0;
+      border-radius: 20px;
+      padding: 4px 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .reviews {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 14px;
+    }
+  </style>
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Crispy Kitchen</div>
+    <ul>
+      <li><a href="crispy.html" class="active">Home</a></li>
+      <li><a href="story.html" class="active">Story</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="#">Our Updates</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="form.html" class="btn">Reservation</a>
+  </nav>
+
+  
+  <section class="hero">
+    <div class="text">
+      <h1>Delicious Steaks</h1>
+      <div class="rating">
+        4.4/5 <span>★★★★★</span><br>
+        From <strong>1,206+</strong> Customer Reviews
+      </div>
+    </div>
+    <div class="image-box">
+      <img src= "crispy1.jpg"alt="Delicious Steak">
+
+      <div class="price">$26.50</div>
+      <div class="rating" style="color:#fff; font-size: 14px;">3.8/5 ★★★★☆</div>
+      <div class="arrows">
+        <button class="left">←</button>
+        <button class="right">→</button>
+      </div>
+    </div>
+  </section>
+
+  <h2>Special Menus</h2>
+
+  <div class="menu-container">
+    <!-- Card 1 -->
+    <div class="menu-card">
+      <div style="position: relative;">
+        <img src=https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg alt="Morning Fresh">
+        <div class="badge">Breakfast</div>
+      </div>
+      <div class="menu-info">
+        <h3>Morning Fresh <span class="price">$12.50</span></h3>
+        <div class="stars">★ ★ ★ ★ ☆</div>
+        <div class="reviews">4.3/5 — 102 Reviews</div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="menu-card">
+      <div style="position: relative;">
+        <img src=https://www.tooplate.com/templates/2129_crispy_kitchen/images/lunch/farhad-ibrahimzade-MGKqxm6u2bc-unsplash.jpg alt="Tooplate Soup">
+        <div class="badge">Lunch</div>
+      </div>
+      <div class="menu-info">
+        <h3>Tooplate Soup <span class="price">$24.50</span></h3>
+        <div class="stars">★ ★ ★ ☆ ☆</div>
+        <div class="reviews">3/5 — 50 Reviews</div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="menu-card">
+      <div style="position: relative;">
+        <img src=https://www.tooplate.com/templates/2129_crispy_kitchen/images/dinner/keriliwi-c3mFafsFz2w-unsplash.jpg alt="Premium Steak">
+        <div class="badge">Dinner</div>
+      </div>
+      <div class="menu-info">
+        <h3>Premium Steak <span class="price">$45</span></h3>
+        <div class="stars">★ ★ ★ ☆ ☆</div>
+        <div class="reviews">3/5 — 86 Reviews</div>
+      </div>
+    </div>
+
+    <!-- card 4-->
+    <div class="menu-card">
+        <div style="position: relative;">
+          <img src=	https://www.tooplate.com/templates/2129_crispy_kitchen/images/dinner/farhad-ibrahimzade-ZipYER3NLhY-unsplash.jpg alt="seafood set">
+          <div class="badge">Dinner</div>
+        </div>
+        <div class="menu-info">
+          <h3>Premium Steak <span class="price">$86</span></h3>
+          <div class="stars">★ ★ ★ ☆ ☆</div>
+          <div class="reviews">3/5 — 44 Reviews</div>
+        </div>
+      </div>   
+    <!--card 5-->
+    <div class="menu-card">
+        <div style="position: relative;">
+          <img src=https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/louis-hansel-dphM2U1xq0U-unsplash.jpg alt="burger set">
+          <div class="badge">Dinner</div>
+        </div>
+        <div class="menu-info">
+          <h3>Premium Steak <span class="price">$20</span></h3>
+          <div class="stars">★ ★ ★ ☆ ☆</div>
+          <div class="reviews">3/5 — 102 Reviews</div>
+        </div>  
+    </div>
+    <!--card 6-->
+    <div class="menu-card">
+        <div style="position: relative;">
+          <img src=	https://www.tooplate.com/templates/2129_crispy_kitchen/images/lunch/farhad-ibrahimzade-D5c9ZciQy_I-unsplash.jpg alt="healthy soup">
+          <div class="badge">Dinner</div>
+        </div>
+        <div class="menu-info">
+          <h3>Premium Steak <span class="price">$34.20</span></h3>
+          <div class="stars">★ ★ ★ ☆ ☆</div>
+          <div class="reviews">3/5 — 66 Reviews</div>
+        </div>   
+    </div>
+  </div>
+
+</body>
+</html>

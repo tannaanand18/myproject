@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Template</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f3f3;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+
+.resume-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Left Panel */
+.left {
+  width: 300px;
+  background-color: #2281c0;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.role {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.section h3 {
+  color: #ddd;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+/* Right Panel */
+.right {
+  flex: 1;
+  padding: 30px;
+}
+
+.right h2 {
+  color: #333;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+.skills span {
+  display: inline-block;
+  background-color: #eee;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <!-- Left Sidebar -->
+    <div class="left">
+      <img src="resume.jpg" alt="Profile" class="profile-pic">
+      <h2>Tanna Anand</h2>
+      <p class="role">Web Developer</p>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <p><strong>Email:</strong><br>tannaanand992@gmail.com</p>
+        <p><strong>Phone:</strong><br>+91 8866220502</p>
+        <p><strong>Address:</strong><br>H#1, Area – Ahemdabad 360052</p>
+        <p><strong>LinkedIn:</strong><br>#</p>
+      </div>
+
+      <div class="section">
+        <h3>Languages</h3>
+        <ul>
+          <li>Gujrati</li>
+          <li>English</li>
+          <li>Hindi</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Certificates</h3>
+        <ul>
+          <li>Full-Stack Web Dev With Python</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="right">
+      <section>
+        <h2>Summary</h2>
+        <p>Highly motivated web developer with strong technical background and a passion for building user-centric websites. Proficient in front-end and back-end development.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p><strong>Btech computer Engineering</strong> – Aug 2023<br>Silver oak university, Ahemdabad</p>
+        <ul>
+          <li><strong>Relevant coursework:</strong> Web Dev, OOP, DBMS, Algorithms</li>
+          <li><strong>Project:</strong> Built e-commerce site – 15% sales increase</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li>Make a E-commerce website</li>
+          <li>Built personal portfolio website</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>React</span>
+          <span>Basic Mongodb</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Hobbies</h2>
+        <div class="skills">
+          <span>Cricket</span>
+          <span>Photography</span>
+          <span>Travelling</span>
+          <span>Public Speaking</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
