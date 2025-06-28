@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Animation JS</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: #f44336;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      border-radius: 8px;
+    }
+
+    #startBtn {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box"></div>
+  <button id="startBtn">Start</button>
+
+  <script>
+    const box = document.getElementById("box");
+    const button = document.getElementById("startBtn");
+
+    button.addEventListener("click", () => {
+      let pos = 0;
+      const end = window.innerWidth / 2 - 50; // center horizontally
+      const interval = setInterval(() => {
+        if (pos >= end) {
+          clearInterval(interval);
+        } else {
+          pos += 5; // speed of movement
+          box.style.left = pos + "px";
+        }
+      }, 10); // interval speed (ms)
+    });
+  </script>
+
+</body>
+</html>

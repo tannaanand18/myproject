@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Spinner Validator</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+      background: #f4f4f4;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .condition {
+      text-align: left;
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: #666;
+    }
+
+    .condition i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .spinner {
+      color: orange;
+      animation: spin 1s linear infinite;
+    }
+
+    .valid {
+      color: green;
+    }
+
+    .invalid {
+      color: red;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Password Validation</h2>
+  <input type="password" id="password" placeholder="Enter Password" oninput="validate()">
+
+  <div id="lengthCond" class="condition"><i class="fas fa-spinner spinner"></i> At least 10 characters</div>
+  <div id="capitalCond" class="condition"><i class="fas fa-spinner spinner"></i> At least one capital letter</div>
+  <div id="numberCond" class="condition"><i class="fas fa-spinner spinner"></i> At least one number</div>
+
+  <button id="submitBtn" disabled>Submit</button>
+</div>
+
+<script>
+  function validate() {
+    const pwd = document.getElementById("password").value;
+    const submitBtn = document.getElementById("submitBtn");
+
+    const lengthCond = document.getElementById("lengthCond");
+    const capitalCond = document.getElementById("capitalCond");
+    const numberCond = document.getElementById("numberCond");
+
+    // Conditions
+    const hasLength = pwd.length >= 10;
+    const hasCapital = /[A-Z]/.test(pwd);
+    const hasNumber = /[0-9]/.test(pwd);
+
+    // Function to update icon and style
+    function updateCondition(element, condition) {
+      if (pwd.length === 0) {
+        element.innerHTML = `<i class="fas fa-spinner spinner"></i> ${element.textContent.slice(2)}`;
+        element.className = "condition";
+      } else if (condition) {
+        element.innerHTML = `<i class="fas fa-check"></i> ${element.textContent.slice(2)}`;
+        element.className = "condition valid";
+      } else {
+        element.innerHTML = `<i class="fas fa-times"></i> ${element.textContent.slice(2)}`;
+        element.className = "condition invalid";
+      }
+    }
+
+    updateCondition(lengthCond, hasLength);
+    updateCondition(capitalCond, hasCapital);
+    updateCondition(numberCond, hasNumber);
+
+    submitBtn.disabled = !(hasLength && hasCapital && hasNumber);
+  }
+</script>
+
+</body>
+</html>

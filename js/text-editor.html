@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Text Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .toolbar {
+      margin-bottom: 10px;
+    }
+
+    .toolbar button {
+      padding: 8px 12px;
+      margin: 2px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #editor {
+      min-height: 200px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .output {
+      margin-top: 30px;
+      padding: 15px;
+      border: 1px solid #aaa;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mini Rich Text Editor</h2>
+
+  <!-- Toolbar with Formatting Buttons -->
+  <div class="toolbar">
+    <button onclick="format('bold')"><b>B</b></button>
+    <button onclick="format('italic')"><i>I</i></button>
+    <button onclick="format('underline')"><u>U</u></button>
+    <button onclick="format('justifyLeft')">Left</button>
+    <button onclick="format('justifyCenter')">Center</button>
+    <button onclick="format('justifyRight')">Right</button>
+    <button onclick="format('formatBlock','<h3>')">H3</button>
+  </div>
+
+  <!-- Editable Content Box -->
+  <div id="editor" contenteditable="true">
+    Type your text here...
+  </div>
+
+  <!-- Display Output -->
+  <div class="output">
+    <h3>Live Preview:</h3>
+    <div id="preview"></div>
+  </div>
+
+  <script>
+    function format(command, value = null) {
+      document.execCommand(command, false, value);
+      updatePreview();
+    }
+
+    function updatePreview() {
+      const editorContent = document.getElementById("editor").innerHTML;
+      document.getElementById("preview").innerHTML = editorContent;
+    }   
+  </script>
+
+</body>
+</html>

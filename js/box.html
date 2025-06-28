@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Box</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: lightblue;
+      border: 2px solid #333;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 150px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Click the button to create a box</h2>
+  <div style="text-align:center;">
+    <button onclick="createBox()">Create Box</button>
+  </div>
+
+  <div id="box-container"></div>
+
+  <script>
+    function createBox() {
+      const box = document.createElement('div');
+      box.className = 'box';
+      document.getElementById('box-container').appendChild(box);
+    }
+  </script>
+
+</body>
+</html>

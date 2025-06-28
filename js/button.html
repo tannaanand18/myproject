@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Name on Click</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #795f5e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #nameDisplay {
+      margin-top: 20px;
+      font-size: 24px;
+      color: rgba(214, 17, 43, 0.803);
+      font-weight: bold;
+    }
+  </style>
+  
+</head>
+<body>  
+
+  <h2 style="text-align:center;">Click the Button to Show Your Name</h2>
+
+  <div style="text-align:center;" id="button-container"></div>
+  <div id="nameDisplay"></div>
+
+  <script>
+    const btn = document.createElement("button");
+    btn.textContent = "Show My Name";
+    btn.onclick = function() {
+      document.getElementById("nameDisplay").textContent = "Your Name: Anand Tanna";
+    };
+    document.getElementById("button-container").appendChild(btn);
+  </script>
+
+</body>
+</html>
